@@ -47,6 +47,7 @@
             max-width: 1300px;
             backdrop-filter: blur(5px);
             box-sizing: border-box;
+            position: relative;
         }
 
         header::after {
@@ -65,19 +66,22 @@
             100% { transform: translateX(100%); }
         }
 
-        h1 {
-            font-size: 2.5em;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #ffffff;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5);
-            font-weight: 800;
+        .header-logo {
+            max-width: 130px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
         }
 
         p.subtitle {
             font-size: 1em;
             color: #b22222;
-            margin-top: 5px;
+            margin-top: 10px;
             font-weight: 400;
             position: relative;
             display: inline-block;
@@ -191,7 +195,9 @@
         }
 
         .download-btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 14px 20px;
             text-align: center;
             text-decoration: none;
@@ -202,7 +208,7 @@
             text-transform: uppercase;
             background: linear-gradient(45deg, #8b0000, #b22222);
             border: 2px solid #8b0000;
-            box-shadow: 0 0 12px rgba(139, 0, 0, 0.7), inset 0 0 6px rgba( Lama34, 0.5);
+            box-shadow: 0 0 12px rgba(139, 0, 0, 0.7), inset 0 0 6px rgba(178, 34, 34, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             margin-bottom: 10px;
@@ -265,7 +271,9 @@
 </head>
 <body>
     <header>
-        <h1>RDR2 Mobile</h1>
+        <a href="https://glxy.site">
+            <img src="https://i.postimg.cc/43k89wN5/Spring.png" alt="RDR2 Mobile Logo" class="header-logo" loading="lazy">
+        </a>
         <p class="subtitle">Ride Through the Wild West</p>
     </header>
 
@@ -288,14 +296,15 @@
                     <div class="platform">Works on iOS & Android</div>
                     <p>Saddle up as Arthur Morgan in an epic Wild West adventure. Hunt, rob, and survive, now on your mobile device.</p>
                 </div>
-                <a href="https://play.google.com/store" class="download-btn"><i class="fab fa-android"></i>ANDROID</a>
-                <a href="https://www.apple.com/app-store/" class="download-btn"><i class="fab fa-apple"></i>iOS</a>
+                <a href="https://play.google.com/store/apps/details?id=com.heliogames.westland" class="download-btn"><i class="fab fa-android"></i>ANDROID</a>
+                <a href="https://apps.apple.com/us/app/westland-survival-cowboy-rpg/id1339238576" class="download-btn"><i class="fab fa-apple"></i>iOS</a>
                 <div class="download-counter">Downloads: <span class="count">0</span></div>
             </div>
         </div>
     </div>
 
     <footer>
+        <p>NOTE: You will download a mobile game similar to the one you selected.</p>
         <p>© 2025 GLXY.SITE - All rights reserved.</p>
     </footer>
 
